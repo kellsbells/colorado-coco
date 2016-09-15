@@ -7,6 +7,8 @@
  * @package newtheme
  */
 
+define( 'ASSETS_VERSION', '1.0.0' );
+
 if ( ! function_exists( 'newtheme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
