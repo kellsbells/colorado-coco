@@ -1,0 +1,40 @@
+//--------------------------------------------------------------
+// Mixins
+//--------------------------------------------------------------
+
+// -------------------
+// Media Query Helpers
+// -------------------
+
+@mixin breakpoint($bp, $direction: min) {
+	@media (#{$direction}-width: $bp)  {
+		@content;
+	}
+}
+
+
+
+
+// ---------
+// Clearings
+// ---------
+
+// Overrides Compass-related issues and stops deprecation warnings
+// See: https://github.com/Compass/compass/issues/1924
+@mixin box-sizing($value) {
+	-moz-box-sizing: $value;
+	box-sizing: $value;
+}
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
